@@ -1,0 +1,23 @@
+\frametitle{Tarefa de Casa: Configuração do Ambiente de Desenvolvimento}
+  \textbf{Preparação Inicial para o Desenvolvimento Web Moderno}
+  \begin{itemize}
+    \item \textbf{Escolha do Sistema Operacional:}
+    \begin{itemize}
+      \item Opte por \textit{Ubuntu Linux} como seu sistema operacional para desenvolvimento. A configuração do Node.js pode ser mais desafiadora no Windows devido a peculiaridades de sistema.
+    \end{itemize}
+
+    \item \textbf{Instalação do Node.js:}
+    \begin{itemize}
+      \item Instale o Node.js para executar e desenvolver aplicações JavaScript do lado do servidor. Siga as instruções oficiais em: \url{https://nodejs.org/en/download/package-manager/}
+    \end{itemize}
+
+    \item \textbf{Instalação do Visual Studio Code (VSCode):}
+    \begin{itemize}
+      \item Instale o VSCode, um editor de código fonte leve e poderoso, suportando desenvolvimento Node.js, JavaScript e TypeScript. Disponível em: \url{https://code.visualstudio.com/}
+    \end{itemize}
+
+    \item \textbf{Criação de Conta no GitHub:}
+    \begin{itemize}
+      \item Para quem ainda não tem, crie sua conta no GitHub, essencial para controle de versão e colaboração em projetos de software. Visite: \url{https://github.com/}
+    \end{itemize}
+  \end{itemize}
