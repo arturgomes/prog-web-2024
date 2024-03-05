@@ -132,3 +132,55 @@
     \item \textbf{Descentralização:} Exploração de tecnologias como blockchain para criar arquiteturas menos centralizadas e mais seguras.
   \end{itemize}
 \end{frame}
+
+\section{Arquiteturas Modernas de Aplicações Web}
+
+\begin{frame}{Visão Geral das Arquiteturas Modernas}
+  \begin{itemize}
+    \item As arquiteturas modernas estão evoluindo para \textbf{sistemas distribuídos}, focando em \textit{escalabilidade}, \textit{flexibilidade} e \textit{independência de serviço}.
+    \item Componentes chave incluem \textbf{serviços}, \textbf{APIs}, \textbf{API Gateways}, e \textbf{bancos de dados isolados}.
+    \item Esses sistemas são projetados para \textit{facilitar a manutenção}, \textit{atualizações rápidas} e \textit{a entrega contínua de software}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Frameworks mais usados em 2023}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/architecture.png}
+    \caption{Frameworks mais usados}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Serviços em Arquiteturas Modernas}
+  \begin{itemize}
+    \item \textbf{Microserviços:} Aplicações são divididas em pequenos serviços independentes, cada um responsável por uma função específica.
+    \item Cada serviço é \textit{autônomo} e pode ser desenvolvido, implantado e escalado \textit{independentemente}.
+    \item Favorece a \textbf{diversidade tecnológica}, permitindo que diferentes serviços usem diferentes stacks tecnológicas.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{APIs: Ponte para a Comunicação}
+  \begin{itemize}
+    \item \textbf{APIs (Application Programming Interfaces)} servem como pontes para a comunicação entre serviços, aplicativos e sistemas.
+    \item Facilitam a \textit{integração e a interoperabilidade} entre diferentes componentes de software e serviços de terceiros.
+    \item Utilizam padrões como \textbf{REST} e \textbf{GraphQL} para otimizar a comunicação e o tráfego de dados.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{API Gateways}
+  \begin{itemize}
+    \item O \textbf{API Gateway} atua como um intermediário que \textit{gerencia solicitações de entrada}, direcionando-as para os serviços internos apropriados.
+    \item Oferece \textit{autenticação}, \textit{rate limiting}, e \textit{caching} para melhorar a segurança e a eficiência.
+    \item Simplifica a arquitetura do cliente, oferecendo um ponto único de entrada para várias APIs e serviços.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Bancos de Dados Isolados}
+  \begin{itemize}
+    \item Em arquiteturas baseadas em microserviços, cada serviço geralmente possui seu \textbf{próprio banco de dados isolado}, garantindo \textit{segurança} e \textit{independência de dados}.
+    \item Isso permite que os serviços sejam \textit{escalados ou modificados} sem afetar outros serviços.
+    \item Apoia a \textbf{consistência} e a \textbf{integridade dos dados} em ambientes distribuídos e altamente disponíveis.
+  \end{itemize}
+\end{frame}
+
