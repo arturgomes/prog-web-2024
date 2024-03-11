@@ -1,223 +1,324 @@
-\title{Introdução à Web}
+\title{Linguagens de Marcação e Introdução ao HTML5}
 \date{\today}
 \frame{\titlepage}
 
-\begin{frame}{Agenda}
-  \tableofcontents
-\end{frame}
-
-\section{História da Web}
-\begin{frame}{Origem da Internet}
+% Slide: O que é HTML?
+% Slide 1: A Origem da Internet e o Nascimento do HTML
+\begin{frame}[fragile]
+  \frametitle{A Origem da Internet e o Nascimento do HTML}
   \begin{itemize}
-    \item \textbf{Década de 1960:} Projeto ARPANET - Defesa dos EUA cria a primeira rede de comunicação à prova de falhas.
-    \item \textbf{Expansão:} A ARPANET se conecta a universidades, facilitando a pesquisa acadêmica e militar.
-    \item \textbf{Protocolo TCP/IP:} Introduzido em 1983, fundamenta a comunicação na Internet moderna.
+    \item A internet começou como um projeto de pesquisa nos anos 1960, tornando-se uma ferramenta pública na década de 1990.
+    \item O HTML foi criado por Tim Berners-Lee no início dos anos 1990 como uma forma de estruturar e vincular documentos.
+    \item Sua criação marcou o início da World Wide Web, permitindo a criação de páginas acessíveis globalmente através de navegadores.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Criação da World Wide Web}
+% Slide 2: Por que HTML?
+\begin{frame}[fragile]
+  \frametitle{Por que HTML?}
   \begin{itemize}
-    \item \textbf{Tim Berners-Lee:} Físico no CERN, propôs um sistema de gerenciamento de informação em 1989.
-    \item \textbf{Objetivo:} Facilitar o compartilhamento e atualização de informações entre pesquisadores.
-    \item \textbf{Primeiro website:} Lançado em 1991, acessível externamente em 1993.
+    \item HTML simplifica a apresentação de informações na internet, introduzindo uma maneira padronizada de estruturar texto e multimídia.
+    \item Ele permite a interligação entre documentos por meio de hiperlinks, formando a teia de conexões que define a web.
+    \item A facilidade de uso e o amplo suporte em navegadores tornaram o HTML a espinha dorsal da criação de conteúdo na web.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Evolução da Web: A Primeira Fase}
+% Slide 3: A Evolução do HTML e sua Importância Atual
+\begin{frame}[fragile]
+  \frametitle{A Evolução do HTML e sua Importância Atual}
   \begin{itemize}
-    \item \textbf{Web 1.0 (Década de 1990):} Era das páginas estáticas. Conteúdo criado por poucos, consumido por muitos.
-    \item \textbf{Formatos de mídia:} Textos e imagens predominam, com pouca interatividade.
-    \item \textbf{Ferramentas de busca:} Advento de motores de busca como Yahoo! e Google, facilitando a navegação.
+    \item Desde sua criação, o HTML evoluiu através de várias versões, incorporando novos elementos e funcionalidades para atender às crescentes demandas da web moderna.
+    \item HTML5, a versão mais recente, inclui suporte para gráficos, áudio, vídeo, e interações complexas, abrindo novas possibilidades para desenvolvedores e criadores de conteúdo.
+    \item Entender HTML é essencial para qualquer pessoa que deseja criar ou gerenciar conteúdo na internet, sendo uma habilidade fundamental no campo do desenvolvimento web.
+  \end{itemize}
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{HTML}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{assets/tatoo.jpeg}
+  \end{figure}
+\end{frame}
+
+% Slide: Conteúdos do <head>
+\begin{frame}[fragile]
+  \frametitle{Conteúdos da Seção \texttt{<head>}}
+  \begin{itemize}
+    \item \textbf{Título (\texttt{<title>}):} Define o título da página, que aparece na aba do navegador.
+    \item \textbf{Meta Tags (\texttt{<meta>}):} Fornecem metadados sobre a página HTML, como conjunto de caracteres, descrição da página, e palavras-chave.
+      \begin{itemize}
+        \item Exemplo: \texttt{<meta charset="UTF-8">} especifica a codificação de caracteres para a página.
+      \end{itemize}
+    \item \textbf{Links para Folhas de Estilo (\texttt{<link>}):} Referencia folhas de estilo externas (CSS) que definem a aparência da página.
+      \begin{itemize}
+        \item Exemplo: \texttt{<link rel="stylesheet" href="styles.css">}
+      \end{itemize}
+    \item \textbf{Scripts (\texttt{<script>}):} Inclui código JavaScript que pode ser executado para adicionar interatividade à página.
+      \begin{itemize}
+        \item Exemplo: \texttt{<script src="script.js"></script>}
+      \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Transição para a Web Dinâmica}
+% Slide: Conteúdos do <body>
+\begin{frame}[fragile]
+  \frametitle{Conteúdos da Seção \texttt{<body>}}
   \begin{itemize}
-    \item \textbf{Web 2.0 (Início dos anos 2000):} Foco na interatividade, redes sociais e conteúdo gerado pelo usuário.
-    \item \textbf{Aplicações web:} Surgimento de plataformas como Facebook, YouTube e Wikipedia.
-    \item \textbf{Tecnologias chave:} JavaScript, AJAX e frameworks frontend revolucionam a criação de páginas dinâmicas.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{A Web Moderna e o Futuro}
-  \begin{itemize}
-    \item \textbf{Web 3.0 e além:} Enfatiza a semântica, inteligência artificial, e a descentralização da internet.
-    \item \textbf{Internet das Coisas (IoT):} A Web se expandindo além dos computadores, conectando dispositivos do dia a dia.
-    \item \textbf{Desafios e oportunidades:} Privacidade, segurança da informação e a promessa de uma Web mais integrada e personalizada.
-  \end{itemize}
-\end{frame}
-
-
-\section{Conceitos de Internet e Web}
-\section{Conceitos de Internet e Web}
-\begin{frame}{Internet vs. Web}
-  \begin{itemize}
-    \item \textbf{Internet:} Uma vasta rede de redes. Um sistema global de redes de computadores interconectadas que utilizam o protocolo de internet (TCP/IP) para se comunicarem.
-    \item \textbf{Web (World Wide Web):} Um dos serviços disponíveis na Internet, permitindo a visualização de páginas interligadas por meio de navegadores.
-    \item \textbf{Diferença Chave:} A Internet é a infraestrutura, enquanto a Web é um serviço construído sobre essa infraestrutura.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Como a Web Funciona - Parte 1}
-  \begin{itemize}
-    \item \textbf{URLs (Uniform Resource Locators):} Endereços usados para acessar páginas na Web.
-    \item \textbf{Navegadores (Browsers):} Programas que interpretam e exibem as páginas da Web aos usuários.
-    \item \textbf{Servidores Web:} Computadores que armazenam as páginas da Web e as disponibilizam aos usuários.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Como a Web Funciona - Parte 2}
-  \begin{itemize}
-    \item \textbf{Arquitetura Cliente-Servidor:} Modelo de comunicação onde os clientes solicitam recursos e os servidores respondem a essas solicitações.
-    \item \textbf{Requisição e Resposta:} Processo básico de interação na Web, usando protocolos como HTTP.
-    \item \textbf{Estado da Conexão:} HTTP é um protocolo sem estado, mas tecnologias como cookies e sessões permitem o rastreamento de sessões de usuário.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Protocolos da Web: HTTP}
-  \begin{itemize}
-    \item \textbf{HTTP (HyperText Transfer Protocol):} Fundamento da comunicação de dados na Web, definindo como as mensagens são formatadas e transmitidas.
-    \item \textbf{Métodos HTTP:} GET para solicitar dados, POST para enviar dados, entre outros.
-    \item \textbf{Códigos de Status:} Respostas do servidor, como 200 (OK), 404 (Not Found) e 500 (Internal Server Error).
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Protocolos da Web: HTTPS}
-  \begin{itemize}
-    \item \textbf{HTTPS (HyperText Transfer Protocol Secure):} Versão do HTTP com camada adicional de segurança (SSL/TLS), protegendo a integridade e a confidencialidade dos dados durante a transferência.
-    \item \textbf{Importância:} Fundamental para transações seguras, como compras online e operações bancárias.
-    \item \textbf{Certificados Digitais:} Usados para autenticar a identidade do servidor, garantindo aos usuários que estão se conectando ao site correto.
+    \item A seção \texttt{<body>} contém o conteúdo principal da página, visível aos usuários.
+    \item \textbf{Textos e Parágrafos (\texttt{<h1>}-\texttt{<h6>}, \texttt{<p>}):} Usados para definir cabeçalhos e parágrafos.
+    \item \textbf{Imagens (\texttt{<img>}):} Incorpora imagens na página.
+      \begin{itemize}
+        \item Exemplo: \texttt{<img src="imagem.jpg" alt="Descrição">}
+      \end{itemize}
+    \item \textbf{Links (\texttt{<a>}):} Cria hiperlinks para outras páginas.
+      \begin{itemize}
+        \item Exemplo: \texttt{<a href="outra\_pagina.html">Visite outra página</a>}
+      \end{itemize}
+    \item \textbf{Listas (\texttt{<ul>}, \texttt{<ol>}, \texttt{<li>}):} Organiza informações em listas não ordenadas ou ordenadas.
+    \item \textbf{Formulários (\texttt{<form>}):} Permite a coleta de dados do usuário.
+      \begin{itemize}
+        \item Exemplo: \texttt{<form action="/submit" method="post">...</form>}
+      \end{itemize}
+    \item \textbf{Vídeos e Áudios (\texttt{<video>}, \texttt{<audio>}):} Incorpora conteúdo de mídia.
   \end{itemize}
 \end{frame}
 
 
-\section{Arquitetura Cliente-Servidor}
-\begin{frame}{Conceito de Cliente-Servidor}
+% Slide: Estrutura Básica do HTML
+\begin{frame}[fragile]
+  \frametitle{Estrutura Básica do HTML}
+  \begin{block}{Exemplo de Estrutura Básica}
+    \begin{verbatim}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título da Página</title>
+</head>
+<body>
+    <h1>Meu Primeiro Título</h1>
+    <p>Meu primeiro parágrafo.</p>
+</body>
+</html>
+    \end{verbatim}
+  \end{block}
   \begin{itemize}
-    \item \textbf{Definição:} Modelo de arquitetura de rede que separa clientes e servidores, cada um com funções específicas.
-    \item \textbf{Cliente:} Dispositivo ou programa que solicita serviços ou recursos.
-    \item \textbf{Servidor:} Dispositivo ou programa que fornece serviços ou recursos aos clientes.
-    \item \textbf{Interações:} Comunicação baseada em requisições (clientes) e respostas (servidores).
+    \item Toda página HTML começa com a declaração do tipo de documento: \texttt{<!DOCTYPE html>}.
+    \item A estrutura é dividida em \texttt{<head>} (cabeçalho) e \texttt{<body>} (corpo).
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Aplicações Web na Arquitetura Cliente-Servidor}
+% Slide: Formulários em HTML
+\begin{frame}[fragile]
+  \frametitle{Formulários em HTML}
   \begin{itemize}
-    \item \textbf{Websites e Aplicações Web:} Exemplos primários de implementações cliente-servidor.
-    \item \textbf{Comunicação:} Utiliza protocolos como HTTP/HTTPS para troca de informações.
-    \item \textbf{Dinamismo:} Servidores processam solicitações e retornam conteúdo dinâmico baseado nas interações do usuário.
+    \item Formulários são utilizados para coletar dados dos usuários.
+    \item Compostos por \texttt{<form>}, \texttt{<input>}, \texttt{<label>}, entre outros.
+    \item Exemplo prático de um formulário simples:
+    \begin{block}{Exemplo de Formulário}
+    \begin{verbatim}
+<form action="/submit" method="post">
+  <label for="name">Nome:</label>
+  <input type="text" id="name" name="name">
+  <input type="submit" value="Enviar">
+</form>
+    \end{verbatim}
+    \end{block}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Benefícios da Arquitetura Cliente-Servidor}
+% Slide: Links e Multimídia
+\begin{frame}[fragile]
+  \frametitle{Links e Multimídia}
   \begin{itemize}
-    \item \textbf{Centralização de Recursos:} Facilita a gestão de dados e aplicações em um local centralizado.
-    \item \textbf{Escalabilidade:} Adiciona mais servidores ou aumenta a capacidade para suportar mais clientes.
-    \item \textbf{Manutenção e Atualizações:} Realizadas no servidor, afetam imediatamente todos os clientes conectados.
+    \item \textbf{Links:} Elemento \texttt{<a>} para criar hiperlinks.
+    \item \textbf{Imagens:} Elemento \texttt{<img>} para incorporar imagens.
+    \item \textbf{Vídeos e Áudios:} Elementos \texttt{<video>} e \texttt{<audio>} para adicionar mídias.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Desafios da Arquitetura Cliente-Servidor}
+% Slide: Atividade Prática
+\begin{frame}[fragile]
+  \frametitle{Atividade Prática}
+  \textbf{Objetivo:} Criar uma página simples utilizando HTML5.
   \begin{itemize}
-    \item \textbf{Segurança:} Necessidade de proteger tanto os servidores quanto as comunicações cliente-servidor.
-    \item \textbf{Carga do Servidor:} Altas demandas podem sobrecarregar servidores, necessitando de técnicas de balanceamento de carga.
-    \item \textbf{Dependência da Conexão:} A experiência do usuário pode ser afetada pela qualidade da conexão à Internet.
+    \item Inclua título, parágrafos, uma imagem e um formulário.
+    \item Experimente com links para outras páginas.
+    \item Tente criar um formulário simples.
+  \end{itemize}
+  \textbf{Entrega:} Submeta o arquivo HTML através da plataforma de ensino.
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Iniciando com FrontEditor}
+  \begin{itemize}
+    \item Para os primeiros passos no desenvolvimento web com HTML e CSS, recomendamos o uso do \textbf{FrontEditor}.
+    \item \textbf{Por que FrontEditor?}
+      \begin{itemize}
+        \item Interface simples e intuitiva, ideal para iniciantes.
+        \item Permite visualização imediata das alterações no código.
+        \item Não requer instalação, funcionando diretamente no seu navegador.
+        \item Ótimo para experimentar conceitos básicos e ver o resultado em tempo real.
+      \end{itemize}
+    \item \textbf{Acesso:} Você pode começar a usar agora mesmo acessando \url{https://www.fronteditor.dev/}
+    \item À medida que você se familiariza com HTML e CSS, a transição para um ambiente de desenvolvimento mais avançado como o \textbf{Visual Studio Code} será natural e proveitosa.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Evolução e Tendências Futuras}
-  \begin{itemize}
-    \item \textbf{Computação em Nuvem:} Aumenta a flexibilidade e reduz custos com infraestrutura física.
-    \item \textbf{Microserviços:} Desenvolvimento e implementação de aplicações como uma coleção de serviços pequenos e independentes.
-    \item \textbf{Descentralização:} Exploração de tecnologias como blockchain para criar arquiteturas menos centralizadas e mais seguras.
-  \end{itemize}
+% Slide: Estrutura Básica do HTML
+\begin{frame}[fragile]
+  \frametitle{Estrutura Básica do HTML}
+  \begin{block}{Exemplo de Estrutura Básica}
+    \small
+    \begin{verbatim}
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Minha Primeira Página</title>
+      </head>
+      <body>
+          <h1>Bem-vindo à Minha Página Web</h1>
+          <p>Este é um parágrafo de introdução sobre esta página.</p>
+          <h2>Sobre Mim</h2>
+          <p>Meu nome é [Seu Nome] e estou aprendendo HTML.</p>
+      </body>
+      </html>
+      
+    \end{verbatim}
+  \end{block}
 \end{frame}
 
-\section{Arquiteturas Modernas de Aplicações Web}
+% Slide: Estrutura Básica do HTML
+\begin{frame}[fragile]
+  \frametitle{Estrutura Básica do HTML}
+  \begin{block}{Exemplo de Estrutura Básica}
+    \small
+    \begin{verbatim}
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Links e Imagens</title>
+      </head>
+      <body>
+          <h1>Links Úteis</h1>
+          <p>Visite o <a href="https://www.wikipedia.org/">Wikipedia</a> para mais informações.</p>
+          <h2>Imagem Exemplar</h2>
+          <p>Aqui está uma imagem interessante:</p>
+          <img src="https://example.com/imagem.jpg" alt="Descrição da Imagem">
+      </body>
+      </html>
 
-\begin{frame}{Visão Geral das Arquiteturas Modernas}
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+% Slide: Estrutura Básica do HTML
+\begin{frame}[fragile]
+  \frametitle{Estrutura Básica do HTML}
+  \begin{block}{Exemplo de Estrutura Básica}
+    \small
+    \begin{verbatim}
+      <!DOCTYPE html>
+      <html>
+      <head>
+          <title>Formulário Simples</title>
+      </head>
+      <body>
+          <h1>Formulário de Contato</h1>
+          <form method="post">
+              <label for="name">Nome:</label><br>
+              <input type="text" id="name" name="name"><br>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email"><br>
+              <input type="submit" value="Enviar">
+          </form>
+      </body>
+      </html>
+      
+    \end{verbatim}
+  \end{block}
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Referências de Documentação do HTML}
   \begin{itemize}
-    \item As arquiteturas modernas estão evoluindo para \textbf{sistemas distribuídos}, focando em \textit{escalabilidade}, \textit{flexibilidade} e \textit{independência de serviço}.
-    \item Componentes chave incluem \textbf{serviços}, \textbf{APIs}, \textbf{API Gateways}, e \textbf{bancos de dados isolados}.
-    \item Esses sistemas são projetados para \textit{facilitar a manutenção}, \textit{atualizações rápidas} e \textit{a entrega contínua de software}.
+    \item \textbf{MDN Web Docs (Mozilla Developer Network):}
+      \begin{itemize}
+        \item Uma das fontes mais abrangentes e confiáveis para aprender sobre HTML, CSS, e JavaScript.
+        \item Endereço: \url{https://developer.mozilla.org/en-US/docs/Web/HTML}
+      \end{itemize}
+    \item \textbf{W3Schools:}
+      \begin{itemize}
+        \item Oferece tutoriais fáceis de seguir, referências e exemplos para web development.
+        \item Endereço: \url{https://www.w3schools.com/html/}
+      \end{itemize}
+    \item \textbf{HTML Living Standard:}
+      \begin{itemize}
+        \item Mantido pelo WHATWG (Web Hypertext Application Technology Working Group), documenta o padrão atual do HTML.
+        \item Endereço: \url{https://html.spec.whatwg.org/}
+      \end{itemize}
+    \item \textbf{HTML5 Rocks:}
+      \begin{itemize}
+        \item Um recurso projetado para desenvolvedores avançados, oferecendo artigos e tutoriais sobre as mais recentes tecnologias da web.
+        \item Endereço: \url{http://www.html5rocks.com/}
+      \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Frameworks mais usados em 2023}
-  \begin{figure}
-    \centering
-    \includegraphics[width=0.6\textwidth]{assets/architecture.png}
-    \caption{Frameworks mais usados}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{Serviços em Arquiteturas Modernas}
+  \frametitle{Introdução ao CSS}
   \begin{itemize}
-    \item \textbf{Microserviços:} Aplicações são divididas em pequenos serviços independentes, cada um responsável por uma função específica.
-    \item Cada serviço é \textit{autônomo} e pode ser desenvolvido, implantado e escalado \textit{independentemente}.
-    \item Favorece a \textbf{diversidade tecnológica}, permitindo que diferentes serviços usem diferentes stacks tecnológicas.
+    \item \textbf{O que é CSS?} CSS (Cascading Style Sheets) é a linguagem usada para estilizar e layout de páginas web. Trabalha em conjunto com o HTML, que estrutura o conteúdo.
+    \item \textbf{Origens do CSS:} Foi proposto pela primeira vez por Håkon Wium Lie em 1994. Desde então, evoluiu para se tornar o padrão de estilização na web.
+    \item \textbf{Propósito:} Permite aos desenvolvedores e designers controlar a aparência do site, incluindo cores, fontes, espaçamentos, layout e muito mais, em diferentes dispositivos e tamanhos de tela.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{APIs: Ponte para a Comunicação}
+\begin{frame}[fragile]
+  \frametitle{Estrutura Básica do CSS}
   \begin{itemize}
-    \item \textbf{APIs (Application Programming Interfaces)} servem como pontes para a comunicação entre serviços, aplicativos e sistemas.
-    \item Facilitam a \textit{integração e a interoperabilidade} entre diferentes componentes de software e serviços de terceiros.
-    \item Utilizam padrões como \textbf{REST} e \textbf{GraphQL} para otimizar a comunicação e o tráfego de dados.
+    \item O CSS pode ser aplicado diretamente nas tags HTML, dentro de um elemento \texttt{<style>} no \texttt{<head>}, ou em um arquivo externo.
+    \item Uma regra CSS consiste em um seletor e um bloco de declaração: \texttt{seletor { propriedade: valor; }}
+    \item \textbf{Seletor:} Identifica os elementos HTML a serem estilizados.
+    \item \textbf{Declaração:} Define como os elementos selecionados devem ser estilizados.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{API Gateways}
+\begin{frame}[fragile]
+  \frametitle{ID vs. Classe}
   \begin{itemize}
-    \item O \textbf{API Gateway} atua como um intermediário que \textit{gerencia solicitações de entrada}, direcionando-as para os serviços internos apropriados.
-    \item Oferece \textit{autenticação}, \textit{rate limiting}, e \textit{caching} para melhorar a segurança e a eficiência.
-    \item Simplifica a arquitetura do cliente, oferecendo um ponto único de entrada para várias APIs e serviços.
+    \item \textbf{ID (\texttt{\#}):} Identificador único para um elemento HTML. Cada elemento pode ter apenas um ID, e cada página deve ter IDs únicos.
+      \begin{itemize}
+        \item Exemplo: \texttt{\#navbar { ... }}
+      \end{itemize}
+    \item \textbf{Classe (\texttt{.}):} Pode ser usada em vários elementos dentro de uma página. Um elemento pode ter várias classes.
+      \begin{itemize}
+        \item Exemplo: \texttt{.highlight { ... }}
+      \end{itemize}
+    \item A escolha entre ID e classe depende do objetivo: ID para estilização única, Classe para estilização compartilhada ou repetida.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Bancos de Dados Isolados}
+\begin{frame}[fragile]
+  \frametitle{Referências de Documentação do CSS}
   \begin{itemize}
-    \item Em arquiteturas baseadas em microserviços, cada serviço geralmente possui seu \textbf{próprio banco de dados isolado}, garantindo \textit{segurança} e \textit{independência de dados}.
-    \item Isso permite que os serviços sejam \textit{escalados ou modificados} sem afetar outros serviços.
-    \item Apoia a \textbf{consistência} e a \textbf{integridade dos dados} em ambientes distribuídos e altamente disponíveis.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Tarefa para as Próximas Duas Semanas}
-  \textbf{Desenvolvimento e Desafios de Programação}
-  
-  \begin{block}{Parte 1: Curso na Rocketseat}
-    \begin{itemize}
-      \item Inscreva-se no portal \url{https://app.rocketseat.com.br/discover}.
-      \item Complete o curso selecionado, focando no desenvolvimento com JavaScript.
-      \item Aplique o conhecimento adquirido criando um projeto ou melhorando um existente.
-      \item Adicione e documente o projeto em um novo repositório no GitHub.
-    \end{itemize}
-  \end{block}
-  
-\end{frame}
-
-\begin{frame}{Tarefa para as Próximas Duas Semanas}
-  \textbf{Desenvolvimento e Desafios de Programação}
-  
-  
-  \begin{block}{Parte 2: Desafios de Programação no LeetCode}
-    \begin{itemize}
-      \item Acesse \url{https://leetcode.com/} e selecione ao menos 4 desafios da seção "Top Interview Questions Easy".
-      \item Resolva os desafios utilizando JavaScript.
-      \item Prepare para apresentar em sala a página do LeetCode com os desafios resolvidos.
-    \end{itemize}
-  \end{block}
-  
-\end{frame}
-
-\begin{frame}{Tarefa para as Próximas Duas Semanas}
-  \textbf{Desenvolvimento e Desafios de Programação}
-  
-  \textbf{Submissão:}
-  \begin{itemize}
-    \item Submeta o link do repositório do GitHub no Classroom.
-    \item Esteja pronto para apresentar seu progresso e discutir o que aprendeu.
+    \item \textbf{MDN Web Docs (Mozilla Developer Network):}
+      \begin{itemize}
+        \item Fornece uma documentação abrangente sobre CSS, cobrindo desde fundamentos até técnicas avançadas.
+        \item Endereço: \url{https://developer.mozilla.org/en-US/docs/Web/CSS}
+      \end{itemize}
+    \item \textbf{CSS-Tricks:}
+      \begin{itemize}
+        \item Um site dedicado a dicas, truques e técnicas de CSS. Ótimo para soluções específicas e inspiração de design.
+        \item Endereço: \url{https://css-tricks.com/}
+      \end{itemize}
+    \item \textbf{W3Schools CSS Tutorial:}
+      \begin{itemize}
+        \item Oferece uma introdução passo a passo ao CSS, ideal para iniciantes e também como referência rápida para desenvolvedores experientes.
+        \item Endereço: \url{https://www.w3schools.com/css/}
+      \end{itemize}
+    \item \textbf{A List Apart:}
+      \begin{itemize}
+        \item Explora o design, o desenvolvimento e o significado do conteúdo web, com um foco particular em padrões web e melhores práticas.
+        \item Endereço: \url{https://alistapart.com/}
+      \end{itemize}
   \end{itemize}
 \end{frame}
