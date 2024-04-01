@@ -1,0 +1,54 @@
+p {
+  color: blue;
+  font-size: 32px;
+}
+p::first-line {
+  font-weight: bold;
+  color: purple;
+  font-size: 1.2em;
+}
+#meuParagrafo {
+  color: #ff0000;
+}
+
+#header {
+  background-color: navy;
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.button {
+  padding: 10px 15px;
+  background-color: green;
+  color: white;
+}
+.border-button {
+  border-radius: 12px;
+}
+
+.conteudo {
+  border: 1px solid #888;
+  padding: 8px 16px;
+  width: 800px;
+  height: 800px;
+}
+.testParagrafo {
+  width: 80%;
+}
+.margin-top-0 {
+  margin-top: 8px;
+}
+
+.rounded-sm {
+  border-radius: 4px;
+}
+.rounded-md {
+  border-radius: 50%;
+}
+.rounded-lg {
+  border-radius: 16px;
+}
+.rounded-xl {
+  border-radius: 32px;
+}

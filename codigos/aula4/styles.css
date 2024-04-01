@@ -126,10 +126,12 @@ body * {
   height: 6px;
   width: 80%;
   display: block;
-  background: #d9d9d9;
+  background: #ff0000;
   border-radius: 10px;
 }
-
+.track:hover {
+  border: 2px solid #ff0;
+}
 .time {
   font-size: 14px;
   color: #c4c4cc;
